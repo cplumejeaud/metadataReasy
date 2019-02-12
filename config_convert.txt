@@ -1,0 +1,36 @@
+##
+## Auteur : Christine Plumejeaud, 10 fevrier 2019
+## FICHIER DE CONFIGURATION pour la conversion des fichiers XML de métadonnées
+## A utiliser avec : convertEncoding.py
+##
+
+
+#################################################################################################################
+##
+## Fichiers de log
+## https://docs.python.org/2/library/logging.html
+## levels
+## ERROR	40
+## WARNING	30
+## INFO	20
+## DEBUG	10
+##
+#################################################################################################################
+
+[log]
+# Fichier de log pour garder une trace des opérations réalisées (il écrase le précédent si il porte le même nom)
+file=F:\Dev\python\log_10fevrier2019.txt
+level=10
+
+
+#################################################################################################################
+##
+## Répertoires à lire et répertoire d'export
+##
+#################################################################################################################
+
+[xml]
+# Répertoire source contenant l'ensemble des fiches de métadonnées à transformer (il sera parcouru récusivement)
+src_dir=D:\CNRS\Travail_LIENSs\Projets\CEBC-Bouju\QRcode\QRcode_3\Metadata\Cours_atelier_R_MD\Export_XML
+# Répertoire cible contenant (sans arborescence) l'ensemble des fichiers XML transformés convertis en UTF8
+export_dir=D:\CNRS\Travail_LIENSs\Projets\CEBC-Bouju\QRcode\QRcode_3\Metadata\Cours_atelier_R_MD\Export_XML_UTF8
