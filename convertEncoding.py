@@ -71,10 +71,6 @@ class ConvertEncoding (object):
         fic = open(src_file, 'r')
         fic2 = open(target_file, 'w')
 
-        #fic = open("D:\\Travail\\OwnCloud\\Zone Atelier PVS\\QRcode\\QRcode_3\\Metadata\\Cours_atelier_R_MD\\Export_XML\\180089013-FR-20180920-AHFCharente-Crue_0004.xml", "r")
-        #fic2 = open("D:\\Travail\\OwnCloud\\Zone Atelier PVS\\QRcode\\QRcode_3\\Metadata\\Cours_atelier_R_MD\\Export_XML\\test.xml", "w")
-        ## Fonctionne en ASCII : .replace('Ã©', 'é')
-
         for line in fic:
             l = line.decode('utf-8').replace('ÃƒÂ©', 'é')
             l = l.replace('ÃƒÂ¨', 'è')
@@ -109,7 +105,7 @@ if __name__ == '__main__':
 
 
     #Passer en parametre le nom du répertoire contenant le fichier de paramètre
-    #rootXMLfiles = sys.argv[1]
+    #configfile = sys.argv[1]
     configfile = 'config_convert.txt'
     config = ConfigParser.RawConfigParser()
     config.read(configfile)
